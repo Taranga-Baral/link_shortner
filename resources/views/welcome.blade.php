@@ -1,185 +1,3 @@
-{{-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Link Shortner</title>
-</head>
-<body>
-    <h2>Link Shortner</h2>
-
-    <form action="/short-url" method="post">
-        @csrf
-    <input type="text" name="long_url"><br><br>
-    <button type="submit">Short URL</button>
-    </form>
-
-  @if (@isset($slug)
-      )
-      <h3>This is the Long URL</h3>
-        {{ $long_url }}<br>
-        <h3>This is the short URL</h3>
-       {{ $slug }}
-   @else
-      There are no any Links that you generated
-   @endif
-
-</body>
-</html> --}}
-
-
-
-
-{{-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Short it - Link Shortener</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f9fafb;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            color: #1f2937;
-        }
-
-        .container {
-            background: #ffffff;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            width: 100%;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 1.75rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: #111827;
-        }
-
-        /* Form Styles */
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        input[type="text"] {
-            padding: 0.75rem;
-            border: 1px solid #d1d5db;
-            border-radius: 8px;
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.3s ease;
-        }
-
-        input[type="text"]:focus {
-            border-color: #3b82f6;
-        }
-
-        button {
-            padding: 0.75rem;
-            background-color: #3b82f6;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #2563eb;
-        }
-
-        /* Result Section */
-        .result {
-            margin-top: 2rem;
-            text-align: left;
-        }
-
-        .result h3 {
-            font-size: 1.25rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
-
-        .result p {
-            background: #f3f4f6;
-            padding: 0.75rem;
-            border-radius: 8px;
-            word-break: break-all;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .copy-btn {
-            padding: 0.5rem 1rem;
-            background-color: #10b981;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .copy-btn:hover {
-            background-color: #059669;
-        }
-
-        .no-links {
-            color: #6b7280;
-            font-style: italic;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h2>Short it</h2>
-        <form action="/short-url" method="post">
-            @csrf
-            <input type="text" name="long_url" placeholder="Enter your long URL here" required>
-            <button type="submit">Shorten URL</button>
-        </form>
-
-        @if (isset($slug))
-            <div class="result">
-                <h3>Original URL</h3>
-                <p>{{ $long_url }}</p>
-                <h3>Shortened URL</h3>
-                <p id="short-url">{{ $slug }}</p>
-                <button class="copy-btn" onclick="copyToClipboard()">Copy Short URL</button>
-            </div>
-        @else
-            <p class="no-links">There are no links generated yet.</p>
-        @endif
-    </div>
-
-    <script>
-        function copyToClipboard() {
-            const shortUrl = document.getElementById('short-url').innerText;
-            navigator.clipboard.writeText(shortUrl).then(() => {
-                alert('Short URL copied to clipboard!');
-            });
-        }
-    </script>
-</body>
-</html> --}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -189,7 +7,6 @@
     <title>Shorty PI - Taranga Baral</title>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* Updated Font */
         body {
             font-family: 'Manrope', 'Inter', sans-serif;
             background-color: #f9fafb;
@@ -390,11 +207,6 @@
             font-style: italic;
         }
 
-
-
-
-        /* Rest of your existing styles remain the same */
-        /* ... (keep all your existing styles as they are) ... */
     </style>
 </head>
 <body>
@@ -411,7 +223,7 @@
             <div class="result">
                 <h3>Original URL</h3>
                 <p>{{ $long_url }}</p>
-                <h3 style="color: #08b99b">Shortened URL</h3>
+                <h3>Shortened URL</h3>
                 <p id="short-url">http://127.0.0.1:8000/{{ $slug }}</p>
                 <button class="copy-btn" onclick="copyToClipboard()">Copy Short URL</button>
             </div>
