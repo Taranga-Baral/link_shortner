@@ -37,8 +37,9 @@ class URLResource extends Controller
 
         $url = new URL();
         $url->long_url = $request->long_url;
-        $slug= str()->random(5);
-        $url->short_url = 'https://tarangabaral.com.np'.'/'.$slug;
+        $slug= uniqid();
+        $url->short_url = $slug;
+
         $url->save();
     }
 

@@ -9,8 +9,8 @@
 <body>
     <h2>Link Shortner</h2>
 
-    <form action="" method="post" enctype="multipart/form-data">
-    @method('put')
+    <form action="/short-url" method="post">
+        @csrf
     <input type="text" name="long_url"><br><br>
     <button type="submit">Short URL</button>
     </form>
