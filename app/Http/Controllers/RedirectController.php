@@ -5,14 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\URL;
 use Illuminate\Http\Request;
 
-class URLResource extends Controller
+class RedirectController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($short_url1)
     {
-        //
+        $url = URL::where('short_url',$short_url1)->first();
+        return redirect($url->long_url);
     }
 
     /**
@@ -28,21 +29,7 @@ class URLResource extends Controller
      */
     public function store(Request $request)
     {
-
-
-
-        $request->validate([
-            "long_url" => "required",
-        ]);
-
-        $url = new URL();
-        $url->long_url = $request->long_url;
-        $slug= uniqid();
-        $url->short_url = $slug;
-        $url->save();
-
-
-
+        //
     }
 
     /**
