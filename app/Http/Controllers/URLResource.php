@@ -28,9 +28,6 @@ class URLResource extends Controller
      */
     public function store(Request $request)
     {
-
-
-
         $request->validate([
             "long_url" => "required",
         ]);
@@ -43,10 +40,6 @@ class URLResource extends Controller
         $url->save();
 
         return view('welcome',compact('slug','long_url'));
-        // return $slug;
-
-
-
     }
 
     /**
