@@ -37,9 +37,13 @@ class URLResource extends Controller
 
         $url = new URL();
         $url->long_url = $request->long_url;
+        $long_url = $request->long_url;
         $slug= uniqid();
         $url->short_url = $slug;
         $url->save();
+
+        return view('welcome',compact('slug','long_url'));
+        // return $slug;
 
 
 
