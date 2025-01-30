@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Shorty PI - Taranga Baral</title>
+    <title>Saano Link - Taranga Baral</title>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -212,7 +212,7 @@
 <body>
 
    <div class="container">
-        <h2>Shorty <span>PI</span></h2>
+        <h2>Saano <span>Link</span></h2>
         <img src="/logo/logo_shorty_pi.gif" alt="" width="250" height="100"><br><br>
         <form action="/short-url" method="post">
             @csrf
