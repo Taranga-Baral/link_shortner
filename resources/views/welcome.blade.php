@@ -212,7 +212,8 @@
 <body>
 
    <div class="container">
-        <h2>Shorty PI</h2>
+        <h2>Shorty <span>PI</span></h2>
+        <img src="/logo/logo_shorty_pi.gif" alt="" width="250" height="100"><br><br>
         <form action="/short-url" method="post">
             @csrf
             <input type="text" name="long_url" placeholder="Enter your long URL here" required>
