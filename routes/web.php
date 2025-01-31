@@ -9,4 +9,4 @@ Route::get('/', function () {
 });
 
 Route::resource('/short-url', URLResource::class);
-Route::resource('/{short_url}', ControllersRedirectController::class);
+Route::resource('/{short_url1}', ControllersRedirectController::class);
